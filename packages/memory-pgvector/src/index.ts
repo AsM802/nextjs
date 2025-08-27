@@ -142,7 +142,7 @@ async function main() {
 
   // Handle chat:message event for AI interaction (now a placeholder)
   airiClient.onEvent('input:text', async (event) => {
-    console.log(`Received input: ${event.data.text}. AI interaction is currently disabled in this service.`);
+    console.warn(`Received input: ${event.data.text}. AI interaction is currently disabled in this service.`);
     airiClient.send({ type: 'error', data: { message: 'AI interaction is currently disabled in this service.' } });
   });
 
@@ -161,7 +161,7 @@ async function main() {
 
   // New: Handle voice:selectPreset event
   airiClient.onEvent('voice:selectPreset', async (event) => {
-    console.log(`Selected voice preset ${event.data.presetId} for character ${event.data.characterId}`);
+    console.warn(`Selected voice preset ${event.data.presetId} for character ${event.data.characterId}`);
     // In a real scenario, this would involve:
     // 1. Updating the character's voice settings in the database.
     if (!db) {
@@ -181,7 +181,7 @@ async function main() {
 
   // New: Handle emote:trigger event
   airiClient.onEvent('emote:trigger', async (event) => {
-    console.log(`Triggering emote "${event.data.emoteName}" for character ${event.data.characterId}`);
+    console.warn(`Triggering emote "${event.data.emoteName}" for character ${event.data.characterId}`);
     // In a real scenario, this would involve:
     // 1. Potentially validating the emote name.
     // 2. Sending the emote trigger to the frontend.

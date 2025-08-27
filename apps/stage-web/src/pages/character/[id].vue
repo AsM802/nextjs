@@ -58,18 +58,17 @@ const handleVoiceAudioChunk = async (payload: any) => {
 
 const handleEmoteTriggered = (payload: any) => {
   // TODO: Trigger character emote animation
-  console.log(`Character ${payload.characterId} triggered emote: ${payload.emoteName}`);
+  console.warn(`Character ${payload.characterId} triggered emote: ${payload.emoteName}`);
 };
 
 const startRecording = async () => {
   try {
     audioContext = new AudioContext();
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    const source = audioContext.createMediaStreamSource(stream);
 
     vad = new VoiceActivityDetector(audioContext, stream);
     vad.on('speechstart', () => {
-      console.log('Speech started');
+      console.warn('Speech started');
       mediaRecorder = new MediaRecorder(stream);
       audioChunks = [];
       mediaRecorder.ondataavailable = (event) => {
@@ -94,19 +93,19 @@ const startRecording = async () => {
     });
 
     vad.on('speechend', () => {
-      console.log('Speech ended');
+      console.warn('Speech ended');
       if (mediaRecorder && mediaRecorder.state === 'recording') {
         mediaRecorder.stop();
       }
       isRecording.value = false;
     });
 
-    vad.on('noisestart', () => console.log('Noise started'));
-    vad.on('noiseend', () => console.log('Noise ended'));
+    vad.on('noisestart', () => console.warn('Noise started'));
+    vad.on('noiseend', () => console.warn('Noise ended'));
 
   } catch (error) {
     console.error('Error starting recording:', error);
-    alert('Error starting recording. Please ensure microphone access is granted.');
+    console.warn('Error starting recording. Please ensure microphone access is granted.');
   }
 };
 
@@ -165,7 +164,7 @@ onMounted(() => {
 
   airiClient.onEvent('error', (payload) => {
     console.error('Backend error:', payload.message);
-    alert(`Error: ${payload.message}`);
+    console.warn(`Error: ${payload.message}`);
   });
 });
 

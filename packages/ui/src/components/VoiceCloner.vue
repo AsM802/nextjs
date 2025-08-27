@@ -51,15 +51,15 @@ const startRecording = async () => {
     mediaRecorder.onstop = () => {
       recordedAudioBlob.value = new Blob(audioChunks, { type: 'audio/webm' });
       // You can now do something with recordedAudioBlob.value, e.g., upload it
-      console.log('Recorded audio blob:', recordedAudioBlob.value);
+      console.warn('Recorded audio blob:', recordedAudioBlob.value);
     };
 
     mediaRecorder.start();
     isRecording.value = true;
-    console.log('Recording started...');
+    console.warn('Recording started...');
   } catch (err) {
     console.error('Error accessing microphone:', err);
-    alert('Could not access microphone. Please ensure it is connected and permissions are granted.');
+    console.warn('Could not access microphone. Please ensure it is connected and permissions are granted.');
   }
 };
 
@@ -67,16 +67,16 @@ const stopRecording = () => {
   if (mediaRecorder && isRecording.value) {
     mediaRecorder.stop();
     isRecording.value = false;
-    console.log('Recording stopped.');
+    console.warn('Recording stopped.');
   }
 };
 
 const convertVoice = () => {
-  alert('Convert functionality not yet implemented.');
+  console.warn('Convert functionality not yet implemented.');
 };
 
 const applyVoice = () => {
-  alert('Apply functionality not yet implemented.');
+  console.warn('Apply functionality not yet implemented.');
 };
 </script>
 

@@ -24,7 +24,7 @@ withDefaults(defineProps<{
   scale: 1,
 })
 
-const emits = defineEmits<{
+const _emits = defineEmits<{
   (e: 'modelLoaded'): void
 }>()
 

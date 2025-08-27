@@ -27,10 +27,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import { WidgetStage } from "@proj-airi/stage-ui/components/scenes"; // Import WidgetStage component
-import { useSettings } from '@proj-airi/stage-ui/stores'; // Import useSettings store
-import { useVRM } from '@proj-airi/stage-ui/stores'; // Import useVRM store
+import { useSettings, useVRM } from '@proj-airi/stage-ui/stores'; // Import stores
 
 const messages = ref<{ role: string; text: string }[]>([]);
 const newMessage = ref('');
@@ -81,16 +80,7 @@ const sendMessage = async () => {
     // Dynamic emote triggering based on AI response (for VRM)
     const lowerCaseResponse = ollamaResponse.toLowerCase();
     // You'll need to map these to actual VRM expressions
-    if (lowerCaseResponse.includes('hello') || lowerCaseResponse.includes('hi') || lowerCaseResponse.includes('nice to meet you')) {
-      // Example: Trigger a 'happy' expression if available in your VRM model
-      // vrmStore.setExpression('happy'); // This method might not exist directly on the store,
-      // you'd interact with the VRMScene component's methods via WidgetStage if exposed.
-      // For now, we'll leave this as a placeholder for VRM expression triggering.
-    } else if (lowerCaseResponse.includes('yes') || lowerCaseResponse.includes('okay') || lowerCaseResponse.includes('good')) {
-      // vrmStore.setExpression('agree');
-    } else {
-      // vrmStore.setExpression('neutral');
-    }
+    // For now, we'll leave this as a placeholder for VRM expression triggering.
 
   } catch (error) {
     console.error('Error communicating with Ollama:', error);
@@ -99,18 +89,19 @@ const sendMessage = async () => {
 };
 
 const uploadVoiceSample = () => {
-  alert('Voice sample upload functionality is a placeholder. This would involve recording/uploading audio for voice cloning.');
-  console.log('Upload Voice Sample button clicked.');
+  console.warn('Voice sample upload functionality is a placeholder. This would involve recording/uploading audio for voice cloning.');
+  console.warn('Upload Voice Sample button clicked.');
   // In a real scenario, this would trigger a file input or recording interface
   // and send the audio to a backend service for processing.
 };
 
 const triggerEmote = () => {
   // For VRM, you'd trigger expressions or animations here
-  alert('Emote triggering for VRM needs to be implemented. Check your VRM model's available expressions/animations.');
-  console.log('Trigger Emote button clicked.');
+  console.warn('Emote triggering for VRM needs to be implemented. Check your VRM model\'s available expressions/animations.');
+  console.warn('Trigger Emote button clicked.');
 };
 </script>
+
 
 <style scoped>
 .companion-container {
@@ -226,6 +217,15 @@ h1 {
 
 .emote-button:hover {
   background-color: #e0a800;
+}
+</style>
+
+<route lang="yaml">
+meta:
+  layout: default
+</route>
+
+color: #e0a800;
 }
 </style>
 
