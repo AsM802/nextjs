@@ -2,9 +2,9 @@
   "name": "@proj-airi/font-xiaolai",
   "type": "module",
   "version": "0.7.2-beta.1",
-  "description": "Essential CSS for font, Xiaolai (小赖字体 / 小賴字體 / シャオライ / Xiaolai Font), used by Project AIRI",
+  "description": "Essential CSS for font, Xiaolai (\u5c0f\u8d56\u5b57\u4f53 / \u5c0f\u8cf4\u5b57\u9ad4 / \u30b7\u30e3\u30aa\u30e9\u30a4 / Xiaolai Font), used by Project AIRI",
   "author": {
-    "name": "ʟxɢᴡ",
+    "name": "\u029fx\u0262\u1d21",
     "email": "calxgw2018@gmail.com",
     "url": "https://github.com/lxgw"
   },
@@ -16,10 +16,18 @@
     "directory": "packages/font-xiaolai"
   },
   "exports": {
-    ".": { "default": "./dist/index.css" },
-    "./index.css": { "default": "./dist/index.css" },
-    "./files/*": { "default": "./dist/files/*" },
-    "./files/*.ttf": { "default": "./dist/files/*.ttf" }
+    ".": {
+      "default": "./dist/index.css"
+    },
+    "./index.css": {
+      "default": "./dist/index.css"
+    },
+    "./files/*": {
+      "default": "./dist/files/*"
+    },
+    "./files/*.ttf": {
+      "default": "./dist/files/*.ttf"
+    }
   },
   "scripts": {
     "dev": "pnpm run build",

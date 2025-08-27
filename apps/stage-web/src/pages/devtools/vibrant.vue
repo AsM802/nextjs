@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { InputFile } from '@proj-airi/ui'
+import BasicInputFile from '@proj-airi/ui/components/Form/Input/BasicInputFile.vue'
 import { Vibrant } from 'node-vibrant/browser'
 import { ref, watch } from 'vue'
 

@@ -4,6 +4,7 @@ import Live2DCanvas from './Live2D/Canvas.vue'
 import Live2DModel from './Live2D/Model.vue'
 
 import '../../utils/live2d-zip-loader'
+import { ref } from 'vue' // Add ref import
 
 withDefaults(defineProps<{
   modelSrc?: string
@@ -22,6 +23,24 @@ withDefaults(defineProps<{
   mouthOpenSize: 0,
   scale: 1,
 })
+
+const emits = defineEmits<{
+  (e: 'modelLoaded'): void
+}>()
+
+const live2dModelRef = ref<InstanceType<typeof Live2DModel> | null>(null)
+
+defineExpose({
+  setMotion: (motionName: string, index?: number) => {
+    live2dModelRef.value?.setMotion(motionName, index)
+  },
+  listMotionGroups: () => {
+    return live2dModelRef.value?.listMotionGroups() || []
+  },
+  getCoreModel: () => {
+    return live2dModelRef.value?.getCoreModel()
+  }
+})
 </script>
 
 <template>
@@ -34,6 +53,7 @@ withDefaults(defineProps<{
       max-h="100dvh"
     >
       <Live2DModel
+        ref="live2dModelRef"
         :model-src="modelSrc"
         :model-file="modelFile"
         :app="app"

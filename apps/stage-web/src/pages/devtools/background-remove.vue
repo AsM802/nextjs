@@ -2,7 +2,7 @@
 import type { PreTrainedModel, Processor } from '@huggingface/transformers'
 
 import { AutoModel, AutoProcessor, env, RawImage } from '@huggingface/transformers'
-import { InputFile } from '@proj-airi/ui'
+import BasicInputFile from '@proj-airi/ui/components/Form/Input/BasicInputFile.vue'
 import { check } from 'gpuu/webgpu'
 import { computed, onMounted, ref } from 'vue'
 
@@ -178,6 +178,6 @@ function downloadAllImages() {
         </div>
       </div>
     </div>
-    <InputFile v-model="imageFiles" w-full />
+    <BasicInputFile v-model="imageFiles" w-full />
   </div>
 </template>

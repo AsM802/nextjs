@@ -23,7 +23,6 @@ import {
   createAzure,
   createDeepSeek,
   createFireworks,
-  createGoogleGenerativeAI,
   createMistral,
   createMoonshot,
   createNovita,
@@ -204,7 +203,7 @@ export const useProvidersStore = defineStore('providers', () => {
       defaultOptions: () => ({
         baseUrl: 'https://openrouter.ai/api/v1/',
       }),
-      createProvider: async config => createOpenRouter((config.apiKey as string).trim(), (config.baseUrl as string).trim()),
+      createProvider: async config => createOpenAI((config.apiKey as string).trim(), (config.baseUrl as string).trim()),
       capabilities: {
         listModels: async (config) => {
           return fetchOpenRouterModels(config)
@@ -281,121 +280,6 @@ export const useProvidersStore = defineStore('providers', () => {
     },
     'app-local-audio-transcription': {
       id: 'app-local-audio-transcription',
-      category: 'transcription',
-      tasks: ['speech-to-text', 'automatic-speech-recognition', 'asr', 'stt'],
-      isAvailableBy: async () => {
-        if ('window' in globalThis && globalThis.window != null) {
-          if ('__TAURI__' in globalThis.window && globalThis.window.__TAURI__ != null) {
-            return true
-          }
-        }
-
-        return false
-      },
-      nameKey: 'settings.pages.providers.provider.app-local-audio-transcription.title',
-      name: 'App (Local)',
-      descriptionKey: 'settings.pages.providers.provider.app-local-audio-transcription.description',
-      description: 'https://github.com/huggingface/candle',
-      icon: 'i-lobe-icons:huggingface',
-      defaultOptions: () => ({}),
-      createProvider: async config => createOpenAI((config.baseUrl as string).trim()),
-      capabilities: {
-        listModels: async (config) => {
-          return (await listModels({
-            ...createOpenAI((config.baseUrl as string).trim()).model(),
-          })).map((model) => {
-            return {
-              id: model.id,
-              name: model.id,
-              provider: 'app-local-candle',
-              description: '',
-              contextLength: 0,
-              deprecated: false,
-            } satisfies ModelInfo
-          })
-        },
-      },
-      validators: {
-        validateProviderConfig: (config) => {
-          if (!config.baseUrl) {
-            return {
-              errors: [new Error('Base URL is required.')],
-              reason: 'Base URL is required. This is likely a bug, report to developers on https://github.com/moeru-ai/airi/issues.',
-              valid: false,
-            }
-          }
-
-          return {
-            errors: [],
-            reason: '',
-            valid: true,
-          }
-        },
-      },
-    },
-    'browser-local-audio-speech': {
-      id: 'browser-local-audio-speech',
-      category: 'speech',
-      tasks: ['text-to-speech', 'tts'],
-      isAvailableBy: async () => {
-        const webGPUAvailable = await isWebGPUSupported()
-        if (webGPUAvailable) {
-          return true
-        }
-
-        if ('navigator' in globalThis && globalThis.navigator != null && 'deviceMemory' in globalThis.navigator && typeof globalThis.navigator.deviceMemory === 'number') {
-          const memory = globalThis.navigator.deviceMemory
-          // Check if the device has at least 8GB of RAM
-          if (memory >= 8) {
-            return true
-          }
-        }
-
-        return false
-      },
-      nameKey: 'settings.pages.providers.provider.browser-local-audio-speech.title',
-      name: 'Browser (Local)',
-      descriptionKey: 'settings.pages.providers.provider.browser-local-audio-speech.description',
-      description: 'https://github.com/moeru-ai/xsai-transformers',
-      icon: 'i-lobe-icons:huggingface',
-      defaultOptions: () => ({}),
-      createProvider: async config => createOpenAI((config.baseUrl as string).trim()),
-      capabilities: {
-        listModels: async (config) => {
-          return (await listModels({
-            ...createOpenAI((config.baseUrl as string).trim()).model(),
-          })).map((model) => {
-            return {
-              id: model.id,
-              name: model.id,
-              provider: 'browser-local-transformers',
-              description: '',
-              contextLength: 0,
-              deprecated: false,
-            } satisfies ModelInfo
-          })
-        },
-      },
-      validators: {
-        validateProviderConfig: (config) => {
-          if (!config.baseUrl) {
-            return {
-              errors: [new Error('Base URL is required.')],
-              reason: 'Base URL is required. This is likely a bug, report to developers on https://github.com/moeru-ai/airi/issues.',
-              valid: false,
-            }
-          }
-
-          return {
-            errors: [],
-            reason: '',
-            valid: true,
-          }
-        },
-      },
-    },
-    'browser-local-audio-transcription': {
-      id: 'browser-local-audio-transcription',
       category: 'transcription',
       tasks: ['speech-to-text', 'automatic-speech-recognition', 'asr', 'stt'],
       isAvailableBy: async () => {
@@ -663,7 +547,7 @@ export const useProvidersStore = defineStore('providers', () => {
             .catch((err) => {
               return {
                 errors: [err],
-                reason: `Failed to reach vLLM, error: ${String(err)} occurred.`,
+                reason: `Failed to reach vLLM, error: ${String(err)} occurred.`, 
                 valid: false,
               }
             })
@@ -908,7 +792,7 @@ export const useProvidersStore = defineStore('providers', () => {
             !config.apiKey && new Error('API key is required'),
             !config.resourceName && new Error('Resource name is required'),
             !config.modelId && new Error('Model ID is required'),
-          ]
+          ].filter(Boolean)
 
           return {
             errors,
@@ -1000,50 +884,7 @@ export const useProvidersStore = defineStore('providers', () => {
         },
       },
     },
-    'google-generative-ai': {
-      id: 'google-generative-ai',
-      category: 'chat',
-      tasks: ['text-generation'],
-      nameKey: 'settings.pages.providers.provider.google-generative-ai.title',
-      name: 'Google Gemini',
-      descriptionKey: 'settings.pages.providers.provider.google-generative-ai.description',
-      description: 'ai.google.dev',
-      icon: 'i-lobe-icons:gemini',
-      defaultOptions: () => ({
-        baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai/',
-      }),
-      createProvider: async config => createGoogleGenerativeAI((config.apiKey as string).trim(), (config.baseUrl as string).trim()),
-      capabilities: {
-        listModels: async (config) => {
-          return (await listModels({
-            ...createGoogleGenerativeAI((config.apiKey as string).trim(), (config.baseUrl as string).trim()).model(),
-          })).map((model) => {
-            return {
-              id: model.id,
-              name: model.id,
-              provider: 'google-generative-ai',
-              description: '',
-              contextLength: 0,
-              deprecated: false,
-            } satisfies ModelInfo
-          })
-        },
-      },
-      validators: {
-        validateProviderConfig: (config) => {
-          const errors = [
-            !config.apiKey && new Error('API key is required.'),
-            !config.baseUrl && new Error('Base URL is required. Default to https://generativelanguage.googleapis.com/v1beta/openai/ for official Google Gemini API with OpenAI compatibility.'),
-          ].filter(Boolean)
-
-          return {
-            errors,
-            reason: errors.filter(e => e).map(e => String(e)).join(', ') || '',
-            valid: !!config.apiKey && !!config.baseUrl,
-          }
-        },
-      },
-    },
+    
     'xai': {
       id: 'xai',
       category: 'chat',
@@ -1239,7 +1080,7 @@ export const useProvidersStore = defineStore('providers', () => {
           const provider = createUnMicrosoft((config.apiKey as string).trim(), (config.baseUrl as string).trim()) as VoiceProviderWithExtraOptions<UnMicrosoftOptions>
 
           const voices = await listVoices({
-            ...provider.voice({ region: config.region as string }),
+            ...provider.voice(),
           })
 
           return voices.map((voice) => {
@@ -1406,10 +1247,10 @@ export const useProvidersStore = defineStore('providers', () => {
       defaultOptions: () => ({
         baseUrl: 'https://unspeech.hyp3r.link/v1/',
       }),
-      createProvider: async config => createUnVolcengine((config.apiKey as string).trim(), (config.baseUrl as string).trim()),
+      createProvider: async config => createUnVolcengine((config.baseUrl as string).trim(), (config.baseUrl as string).trim()) as SpeechProviderWithExtraOptions<string, UnVolcengineOptions>,
       capabilities: {
         listVoices: async (config) => {
-          const provider = createUnVolcengine((config.apiKey as string).trim(), (config.baseUrl as string).trim()) as VoiceProviderWithExtraOptions<UnVolcengineOptions>
+          const provider = createUnVolcengine((config.baseUrl as string).trim(), (config.baseUrl as string).trim()) as VoiceProviderWithExtraOptions<UnVolcengineOptions>
 
           const voices = await listVoices({
             ...provider.voice(),
@@ -1590,11 +1431,11 @@ export const useProvidersStore = defineStore('providers', () => {
       defaultOptions: () => ({
         baseUrl: 'https://api.featherless.ai/v1/',
       }),
-      createProvider: async config => createOpenAI((config.apiKey as string).trim(), (config.baseUrl as string).trim()),
+      createProvider: async config => createOpenAI((config.baseUrl as string).trim(), (config.baseUrl as string).trim()),
       capabilities: {
         listModels: async (config) => {
           return (await listModels({
-            ...createOpenAI((config.apiKey as string).trim(), (config.baseUrl as string).trim()).model(),
+            ...createOpenAI((config.baseUrl as string).trim(), (config.baseUrl as string).trim()).model(),
           })).map((model) => {
             return {
               id: model.id,
@@ -1858,7 +1699,7 @@ export const useProvidersStore = defineStore('providers', () => {
             .catch((err) => {
               return {
                 errors: [err],
-                reason: `Failed to reach Player 2, error: ${String(err)} occurred. If you do not have Player 2 running, please start it and try again.`,
+                reason: `Failed to reach Player 2, error: ${String(err)} occurred. If you do not have Player 2 running, please start it and try again.`, 
                 valid: false,
               }
             })
@@ -1943,7 +1784,7 @@ export const useProvidersStore = defineStore('providers', () => {
           }
 
           return {
-            errors: [],
+            errors,
             reason: '',
             valid: true,
           }
@@ -2043,9 +1884,6 @@ export const useProvidersStore = defineStore('providers', () => {
       modelLoadError.value[providerId] = error instanceof Error ? error.message : 'Unknown error'
       return []
     }
-    finally {
-      isLoadingModels.value[providerId] = false
-    }
   }
 
   // Get models for a specific provider
@@ -2098,13 +1936,13 @@ export const useProvidersStore = defineStore('providers', () => {
   // Function to get provider object by provider id
   async function getProviderInstance<R extends
   | ChatProvider
-  | ChatProviderWithExtraOptions
-  | EmbedProvider
-  | EmbedProviderWithExtraOptions
-  | SpeechProvider
-  | SpeechProviderWithExtraOptions
-  | TranscriptionProvider
-  | TranscriptionProviderWithExtraOptions,
+    | ChatProviderWithExtraOptions
+    | EmbedProvider
+    | EmbedProviderWithExtraOptions
+    | SpeechProvider
+    | SpeechProviderWithExtraOptions
+    | TranscriptionProvider
+    | TranscriptionProviderWithExtraOptions,
   >(providerId: string): Promise<R> {
     const config = providerCredentials.value[providerId]
     if (!config)

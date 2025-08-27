@@ -2,16 +2,16 @@
   "name": "@proj-airi/realtime-audio",
   "type": "module",
   "private": true,
-  "description": "Realtime audio",
+  "description": "Realtime audio for Yoko",
   "author": {
-    "name": "Moeru AI Project AIRI Team",
-    "email": "airi@moeru.ai",
-    "url": "https://github.com/moeru-ai"
+    "name": "The Yoko Project Team",
+    "email": "yoko@example.com",
+    "url": ""
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/moeru-ai/airi.git",
+    "url": "https://github.com/yoko-proj/yoko.git",
     "directory": "apps/realtime-audio"
   },
   "scripts": {

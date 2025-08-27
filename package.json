@@ -1,14 +1,14 @@
 {
   "name": "@proj-airi/root",
   "type": "module",
-  "version": "0.7.2-beta.1",
+  "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@10.14.0",
-  "description": "LLM powered virtual character",
+  "description": "A container of souls of AI waifu / virtual characters to bring them into our worlds.",
   "author": {
-    "name": "Moeru AI Project AIRI Team",
-    "email": "airi@moeru.ai",
-    "url": "https://github.com/moeru-ai"
+    "name": "The Yoko Project Team",
+    "email": "yoko@example.com",
+    "url": ""
   },
   "license": "MIT",
   "scripts": {
@@ -18,7 +18,6 @@
     "dev:ui": "pnpm -rF @proj-airi/stage-ui run story:dev",
     "dev:web": "pnpm -rF @proj-airi/stage-web run dev",
     "dev:tamagotchi": "pnpm -rF @proj-airi/stage-tamagotchi run app:dev",
-    "dev:apps": "pnpm -rF=\"./apps/*\" run --parallel dev",
     "dev:packages": "pnpm -rF=\"./packages/*\" --parallel run dev",
     "build": "turbo run build -F=\"./packages/*\" -F=\"./apps/*\"",
     "build:web": "turbo run build -F @proj-airi/stage-web",
@@ -88,7 +87,8 @@
       "safe-buffer": "npm:@nolyfill/safe-buffer@^1.0.44",
       "safer-buffer": "npm:@nolyfill/safer-buffer@^1.0.44",
       "side-channel": "npm:@nolyfill/side-channel@^1.0.44",
-      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@^1.0.44"
+      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@^1.0.44",
+      "typescript": "$typescript"
     }
   },
   "simple-git-hooks": {
@@ -96,5 +96,8 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.14.1"
   }
 }

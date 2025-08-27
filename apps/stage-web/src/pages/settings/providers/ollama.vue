@@ -133,11 +133,12 @@ function handleResetSettings() {
     </template>
   </Alert>
   <ProviderSettingsLayout
+    style="border: 5px solid orange; background-color: lightblue;"
     :provider-name="providerMetadata?.localizedName"
     :provider-icon="providerMetadata?.icon"
     :on-back="() => router.back()"
   >
-    <ProviderSettingsContainer>
+    <ProviderSettingsContainer style="border: 3px solid green; background-color: lightcoral;">
       <ProviderBasicSettings
         :title="t('settings.pages.providers.common.section.basic.title')"
         :description="t('settings.pages.providers.common.section.basic.description')"

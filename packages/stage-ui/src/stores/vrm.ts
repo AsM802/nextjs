@@ -60,8 +60,9 @@ export const useVRM = defineStore('vrm', () => {
     },
   })
 
-  const defaultModelUrl = '/assets/vrm/models/AvatarSample-B/AvatarSample_B.vrm'
+  const defaultModelUrl = '/assets/vrm/models/AvatarSample-A/AvatarSample_A.vrm'
   const modelUrl = useLocalStorage('settings/vrm/modelURL', defaultModelUrl)
+  modelUrl.value = defaultModelUrl
 
   const scale = useLocalStorage('settings/vrm/cameraScale', 1)
   const modelSize = useLocalStorage('settings/vrm/modelSize', { x: 0, y: 0, z: 0 })

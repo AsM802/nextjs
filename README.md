@@ -12,25 +12,25 @@
   <img width="250" src="./docs/content/public/banner-light-1280x640.avif" />
 </picture>
 
-<h1 align="center">Project AIRI</h1>
+<h1 align="center">Project Yoko</h1>
 
-<p align="center">Re-creating Neuro-sama, a container of souls of AI waifu / virtual characters to bring them into our worlds.</p>
+<p align="center">A container of souls of AI waifu / virtual characters to bring them into our worlds.</p>
 
 <p align="center">
-  [<a href="https://discord.gg/TgQ3Cu2F7A">Join Discord Server</a>] [<a href="https:///airi.moeru.ai">Try it</a>] [<a href="https://github.com/moeru-ai/airi/blob/main/docs/README.zh-CN.md">简体中文</a>] [<a href="https://github.com/moeru-ai/airi/blob/main/docs/README.ja-JP.md">日本語</a>]
+  [<a href="https://discord.gg/TgQ3Cu2F7A">Join Discord Server</a>] [<a href="https:///yoko.dev">Try it</a>] [<a href="https://github.com/yoko-proj/yoko/blob/main/docs/README.zh-CN.md">简体中文</a>] [<a href="https://github.com/yoko-proj/yoko/blob/main/docs/README.ja-JP.md">日本語</a>]
 </p>
 
 <p align="center">
   <a href="https://deepwiki.com/moeru-ai/airi"><img src="https://deepwiki.com/badge.svg"></a>
-  <a href="https://github.com/moeru-ai/airi/blob/main/LICENSE"><img src="https://img.shields.io/github/license/moeru-ai/airi.svg?style=flat&colorA=080f12&colorB=1fa669"></a>
+  <a href="https://github.com/yoko-proj/yoko/blob/main/LICENSE"><img src="https://img.shields.io/github/license/yoko-proj/yoko.svg?style=flat&colorA=080f12&colorB=1fa669"></a>
   <a href="https://discord.gg/TgQ3Cu2F7A"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2FTgQ3Cu2F7A%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&logo=discord&logoColor=white&label=%20&color=7389D8&labelColor=6A7EC2"></a>
-  <a href="https://x.com/proj_airi"><img src="https://img.shields.io/badge/%40proj__airi-black?style=flat&logo=x&labelColor=%23101419&color=%232d2e30"></a>
+  <a href="https://x.com/proj_yoko"><img src="https://img.shields.io/badge/%40proj__yoko-black?style=flat&logo=x&labelColor=%23101419&color=%232d2e30"></a>
   <a href="https://t.me/+7M_ZKO3zUHFlOThh"><img src="https://img.shields.io/badge/Telegram-%235AA9E6?logo=telegram&labelColor=FFFFFF"></a>
 </p>
 
 <p align="center">
-  <a href="https://www.producthunt.com/products/airi?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-airi" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=993524&theme=neutral&t=1752696535380" alt="AIRI - A&#0032;container&#0032;of&#0032;cyber&#0032;living&#0032;souls&#0044;&#0032;re&#0045;creation&#0032;of&#0032;Neuro&#0045;sama | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-  <a href="https://trendshift.io/repositories/14636" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14636" alt="moeru-ai%2Fairi | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+  <a href="https://www.producthunt.com/products/yoko?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-yoko" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=993524&theme=neutral&t=1752696535380" alt="Yoko - A container of cyber living souls, re-creation of Neuro-sama | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+  <a href="https://trendshift.io/repositories/14636" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14636" alt="yoko-proj%2Fyoko | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
 > Heavily inspired by [Neuro-sama](https://www.youtube.com/@Neurosama)
@@ -40,46 +40,56 @@
 
 > [!NOTE]
 >
-> We got a whole dedicated organization [@proj-airi](https://github.com/proj-airi) for all the sub-project that born from Project AIRI, check it out!
+> We got a whole dedicated organization [@proj-yoko](https://github.com/proj-yoko) for all the sub-project that born from Project Yoko, check it out!
 >
 > RAG, memory system, embedded database, icons, Live2D utilities, and more!
 
 Have you dreamed about having a cyber living being (cyber waifu / husbando, digital pet), or digital companion that could play with and talk to you?
 
-With the power of modern large language models like [ChatGPT](https://chatgpt.com), and famous [Claude](https://claude.ai), asking a virtual being able to have role playing and chat with us is already easy enough for everyone. Platforms like [Character.ai (a.k.a. c.ai)](https://character.ai) and [JanitorAI](https://janitorai.com/), and local playgrounds like [SillyTavern](https://github.com/SillyTavern/SillyTavern) is already a well-enough solution for chat based, or visual adventure game like experience.
+With the power of modern large language models like [ChatGPT](https://chatgpt.com), and famous [Claude](https://claude.ai), asking a virtual being to have role playing and chat with us is already easy enough for everyone. Platforms like [Character.ai (a.k.a. c.ai)](https://character.ai) and [JanitorAI](https://janitorai.com/), and local playgrounds like [SillyTavern](https://github.com/SillyTavern/SillyTavern) is already a well-enough solution for chat based, or visual adventure game like experience.
 
 > But, what about the abilities to play games? And see what you are coding at? Chatting while playing games, watching videos, and capable of doing many other things.
 
 Perhaps you know [Neuro-sama](https://www.youtube.com/@Neurosama) already, she is currently the best companion capable of playing games, chatting, and interacting with you and the participants (in VTuber community), some call this kind of being, "digital human" too. **Sadly, it's not open sourced, you cannot interact with her after she went offline from live stream**.
 
-Therefore, this project, AIRI, offers another possibility here: **let you own your digital life, cyber living, easily, anywhere, anytime**.
+Therefore, this project, Yoko, offers another possibility here: **let you own your digital life, cyber living, easily, anywhere, anytime**.
+
+## Features
+
+*   **Embodied AI:** Yoko is more than just a chatbot. It has a customizable body and can express itself through animations and emotes.
+*   **Voice Cloning:** With the power of SoVITS, Yoko can be trained on a voice and generate speech that sounds like the original speaker.
+*   **Character Customization:** Bring your own characters to life! Yoko supports both VRM (3D) and Live2D (2D) models.
+*   **Game Integration:** Yoko can play games like Minecraft and Factorio, and can be extended to support other games.
+*   **Multimodal Interaction:** Yoko can interact with you through text, voice, and even by "seeing" your screen (WIP).
+*   **Extensible Platform:** Yoko is built to be modular and extensible. You can add new features, integrations, and even create your own AI companions based on the Yoko platform.
+*   **Cross-Platform:** Yoko can run in a web browser or as a standalone desktop application.
 
 ## DevLogs we posted & Recent updates
 
-- [DevLog @ 2025.07.18](https://airi.moeru.ai/docs/blog/DevLog-2025.07.18/) on July 18, 2025
-- [DreamLog 0x1](https://airi.moeru.ai/docs/blog/dreamlog-0x1/) on June 16, 2025
-- [DevLog @ 2025.06.08](https://airi.moeru.ai/docs/blog/DevLog-2025.06.08/) on June 8, 2025
-- [DevLog @ 2025.05.16](https://airi.moeru.ai/docs/blog/DevLog-2025.05.16/) on May 16, 2025
-- ...more on [documentation site](https://airi.moeru.ai/docs)
+- [DevLog @ 2025.07.18](https://yoko.dev/docs/blog/DevLog-2025.07.18/) on July 18, 2025
+- [DreamLog 0x1](https://yoko.dev/docs/blog/dreamlog-0x1/) on June 16, 2025
+- [DevLog @ 2025.06.08](https://yoko.dev/docs/blog/DevLog-2025.06.08/) on June 8, 2025
+- [DevLog @ 2025.05.16](https://yoko.dev/docs/blog/DevLog-2025.05.16/) on May 16, 2025
+- ...more on [documentation site](https://yoko.dev/docs)
 
 ## What's so special for this project?
 
-Unlike the other AI driven VTuber open source projects, アイリ VTuber was built with many support of Web technologies such as [WebGPU](https://www.w3.org/TR/webgpu/), [WebAudio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API), [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), [WebAssembly](https://webassembly.org/), [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket), etc. from the first day.
+Unlike the other AI driven VTuber open source projects, Yoko VTuber was built with many support of Web technologies such as [WebGPU](https://www.w3.org/TR/webgpu/), [WebAudio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API), [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), [WebAssembly](https://webassembly.org/), [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket), etc. from the first day.
 
 > [!TIP]
 > Worry about the performance drop since we are using Web related technologies?
 >
-> Don't worry, while Web browser version meant to give a insight about how much we can push and do inside browsers, and webviews, we will never fully rely on this, the desktop version of AIRI is capable of using native [NVIDIA CUDA](https://developer.nvidia.com/cuda-toolkit) and [Apple Metal](https://developer.apple.com/metal/) by default (thanks to HuggingFace & beloved [candle](https://github.com/huggingface/candle) project), without any complex dependency managements, considering the tradeoff, it was partially powered by Web technologies for graphics, layouts, animations, and the WIP plugin systems for everyone to integrate things.
+> Don't worry, while Web browser version meant to give a insight about how much we can push and do inside browsers, and webviews, we will never fully rely on this, the desktop version of Yoko is capable of using native [NVIDIA CUDA](https://developer.nvidia.com/cuda-toolkit) and [Apple Metal](https://developer.apple.com/metal/) by default (thanks to HuggingFace & beloved [candle](https://github.com/huggingface/candle) project), without any complex dependency managements, considering the tradeoff, it was partially powered by Web technologies for graphics, layouts, animations, and the WIP plugin systems for everyone to integrate things.
 
-This means that **アイリ VTuber is capable to run on modern browsers and devices**, and even on mobile devices (already done with PWA support), this brought a lot of possibilities for us (the developers) to build and extend the power of アイリ VTuber to the next level, while still left the flexibilities for users to enable features that requires TCP connections or other non-Web technologies such as connect to voice channel to Discord, or playing Minecraft, Factorio with you and your friends.
+This means that **Yoko VTuber is capable to run on modern browsers and devices**, and even on mobile devices (already done with PWA support), this brought a lot of possibilities for us (the developers) to build and extend the power of Yoko VTuber to the next level, while still left the flexibilities for users to enable features that requires TCP connections or other non-Web technologies such as connect to voice channel to Discord, or playing Minecraft, Factorio with you and your friends.
 
 > [!NOTE]
 >
-> We are still in the early stage of development where we are seeking out talented developers to join us and help us to make アイリ VTuber a reality.
+> We are still in the early stage of development where we are seeking out talented developers to join us and help us to make Yoko VTuber a reality.
 >
 > It's ok if you are not familiar with Vue.js, TypeScript, and devtools that required for this project, you can join us as an artist, designer, or even help us to launch our first live stream.
 >
-> Even you are a big fan of React or Svelte, even Solid, we welcome you, you can open a sub-directory to add features that you want to see in アイリ VTuber, or would like to experiment with.
+> Even you are a big fan of React or Svelte, even Solid, we welcome you, you can open a sub-directory to add features that you want to see in Yoko VTuber, or would like to experiment with.
 >
 > Fields (and related projects) that we are looking for:
 >
@@ -95,45 +105,44 @@ This means that **アイリ VTuber is capable to run on modern browsers and devi
 > - vLLM
 > - WebGPU
 > - Three.js
-> - WebXR ([checkout the another project](https://github.com/moeru-ai/chat) we have under @moeru-ai organization)
+> - WebXR ([checkout the another project](https://github.com/yoko-proj/chat) we have under @yoko-proj organization)
 >
-> **If you are interested in, why not introduce yourself here? [Would like to join part of us to build AIRI?](https://github.com/moeru-ai/airi/discussions/33)**
+> **If you are interested in, why not introduce yourself here? [Would like to join part of us to build Yoko?](https://github.com/yoko-proj/yoko/discussions/33)**
 
 ## Current progress
 
 <img src="./docs/content/public/readme-image-pc-preview.avif">
 
-Capable of
-
-- [x] Brain
+- [x] **Brain:**
   - [x] Play [Minecraft](https://www.minecraft.net)
-  - [x] Play [Factorio](https://www.factorio.com) (WIP, but [PoC and demo available](https://github.com/moeru-ai/airi-factorio))
+  - [x] Play [Factorio](https://www.factorio.com) (WIP, but [PoC and demo available](https://github.com/yoko-proj/yoko-factorio))
   - [x] Chat in [Telegram](https://telegram.org)
   - [x] Chat in [Discord](https://discord.com)
-  - [ ] Memory
+  - [ ] **Memory:**
     - [x] Pure in-browser database support (DuckDB WASM | `pglite`)
     - [ ] Memory Alaya (WIP)
   - [ ] Pure in-browser local (WebGPU) inference
-- [x] Ears
+- [x] **Ears:**
   - [x] Audio input from browser
   - [x] Audio input from [Discord](https://discord.com)
   - [x] Client side speech recognition
   - [x] Client side talking detection
-- [x] Mouth
+- [x] **Mouth:**
   - [x] [ElevenLabs](https://elevenlabs.io/) voice synthesis
-- [x] Body
-  - [x] VRM support
+  - [x] SoVITS-based voice cloning
+- [x] **Body:**
+  - [x] **VRM support:**
     - [x] Control VRM model
-  - [x] VRM model animations
-    - [x] Auto blink
-    - [x] Auto look at
-    - [x] Idle eye movement
-  - [x] Live2D support
+    - [x] VRM model animations (emotes)
+      - [x] Auto blink
+      - [x] Auto look at
+      - [x] Idle eye movement
+  - [x] **Live2D support:**
     - [x] Control Live2D model
-  - [x] Live2D model animations
-    - [x] Auto blink
-    - [x] Auto look at
-    - [x] Idle eye movement
+    - [x] Live2D model animations (emotes)
+      - [x] Auto blink
+      - [x] Auto look at
+      - [x] Idle eye movement
 
 ## Development
 
@@ -149,7 +158,7 @@ pnpm i
 pnpm dev
 ```
 
-### Stage Web (Browser version for [airi.moeru.ai](https://airi.moeru.ai))
+### Stage Web (Browser version for [yoko.dev](https://yoko.dev))
 
 ```shell
 pnpm dev
@@ -175,7 +184,7 @@ Please update the version in `Cargo.toml` after running the `bumpp`:
 npx bumpp --no-commit --no-tag
 ```
 
-## Supported the following LLM API Providers (powered by [xsai](https://github.com/moeru-ai/xsai))
+## Supported the following LLM API Providers (powered by [xsai](https://github.com/yoko-proj/xsai))
 
 - [x] [OpenRouter](https://openrouter.ai/)
 - [x] [vLLM](https://github.com/vllm-project/vllm)
@@ -208,23 +217,23 @@ npx bumpp --no-commit --no-tag
 
 ## Sub-projects born from this project
 
-- [Awesome AI VTuber](https://github.com/proj-airi/awesome-ai-vtuber): A curated list of AI VTubers and related projects
-- [`unspeech`](https://github.com/moeru-ai/unspeech): Universal endpoint proxy server for `/audio/transcriptions` and `/audio/speech`, like LiteLLM but for any ASR and TTS
-- [`hfup`](https://github.com/moeru-ai/hfup): tools to help on deploying, bundling to HuggingFace Spaces
-- [`xsai-transformers`](https://github.com/moeru-ai/xsai-transformers): Experimental [🤗 Transformers.js](https://github.com/huggingface/transformers.js) provider for [xsAI](https://github.com/moeru-ai/xsai).
-- [WebAI: Realtime Voice Chat](https://github.com/proj-airi/webai-realtime-voice-chat): Full example of implementing ChatGPT's realtime voice from scratch with VAD + STT + LLM + TTS.
-- [`@proj-airi/drizzle-duckdb-wasm`](https://github.com/moeru-ai/airi/tree/main/packages/drizzle-duckdb-wasm/README.md): Drizzle ORM driver for DuckDB WASM
-- [`@proj-airi/duckdb-wasm`](https://github.com/moeru-ai/airi/tree/main/packages/duckdb-wasm/README.md): Easy to use wrapper for `@duckdb/duckdb-wasm`
-- [`tauri-plugin-mcp`](https://github.com/moeru-ai/airi/blob/main/crates/tauri-plugin-mcp/README.md): A Tauri plugin for interacting with MCP servers.
-- [AIRI Factorio](https://github.com/moeru-ai/airi-factorio): Allow AIRI to play Factorio
+- [Awesome AI VTuber](https://github.com/proj-yoko/awesome-ai-vtuber): A curated list of AI VTubers and related projects
+- [`unspeech`](https://github.com/yoko-proj/unspeech): Universal endpoint proxy server for `/audio/transcriptions` and `/audio/speech`, like LiteLLM but for any ASR and TTS
+- [`hfup`](https://github.com/yoko-proj/hfup): tools to help on deploying, bundling to HuggingFace Spaces
+- [`xsai-transformers`](https://github.com/yoko-proj/xsai-transformers): Experimental [🤗 Transformers.js](https://github.com/huggingface/transformers.js) provider for [xsAI](https://github.com/yoko-proj/xsai).
+- [WebAI: Realtime Voice Chat](https://github.com/proj-yoko/webai-realtime-voice-chat): Full example of implementing ChatGPT's realtime voice from scratch with VAD + STT + LLM + TTS.
+- [`@proj-yoko/drizzle-duckdb-wasm`](https://github.com/yoko-proj/yoko/tree/main/packages/drizzle-duckdb-wasm/README.md): Drizzle ORM driver for DuckDB WASM
+- [`@proj-yoko/duckdb-wasm`](https://github.com/yoko-proj/yoko/tree/main/packages/duckdb-wasm/README.md): Easy to use wrapper for `@duckdb/duckdb-wasm`
+- [`tauri-plugin-mcp`](https://github.com/yoko-proj/yoko/blob/main/crates/tauri-plugin-mcp/README.md): A Tauri plugin for interacting with MCP servers.
+- [Yoko Factorio](https://github.com/yoko-proj/yoko-factorio): Allow Yoko to play Factorio
 - [Factorio RCON API](https://github.com/nekomeowww/factorio-rcon-api): RESTful API wrapper for Factorio headless server console
-- [`autorio`](https://github.com/moeru-ai/airi-factorio/tree/main/packages/autorio): Factorio automation library
-- [`tstl-plugin-reload-factorio-mod`](https://github.com/moeru-ai/airi-factorio/tree/main/packages/tstl-plugin-reload-factorio-mod): Reload Factorio mod when developing
+- [`autorio`](https://github.com/yoko-proj/yoko-factorio/tree/main/packages/autorio): Factorio automation library
+- [`tstl-plugin-reload-factorio-mod`](https://github.com/yoko-proj/yoko-factorio/tree/main/packages/tstl-plugin-reload-factorio-mod): Reload Factorio mod when developing
 - [Velin](https://github.com/luoling8192/velin): Use Vue SFC and Markdown to write easy to manage stateful prompts for LLM
-- [`demodel`](https://github.com/moeru-ai/demodel): Easily boost the speed of pulling your models and datasets from various of inference runtimes.
-- [`inventory`](https://github.com/moeru-ai/inventory): Centralized model catalog and default provider configurations backend service
-- [MCP Launcher](https://github.com/moeru-ai/mcp-launcher): Easy to use MCP builder & launcher for all possible MCP servers, just like Ollama for models!
-- [🥺 SAD](https://github.com/moeru-ai/sad): Documentation and notes for self-host and browser running LLMs.
+- [`demodel`](https://github.com/yoko-proj/demodel): Easily boost the speed of pulling your models and datasets from various of inference runtimes.
+- [`inventory`](https://github.com/yoko-proj/inventory): Centralized model catalog and default provider configurations backend service
+- [MCP Launcher](https://github.com/yoko-proj/mcp-launcher): Easy to use MCP builder & launcher for all possible MCP servers, just like Ollama for models!
+- [🥺 SAD](https://github.com/yoko-proj/sad): Documentation and notes for self-host and browser running LLMs.
 
 ```mermaid
 %%{ init: { 'flowchart': { 'curve': 'catmullRom' } } }%%
@@ -232,17 +241,17 @@ npx bumpp --no-commit --no-tag
 flowchart TD
   Core("Core")
   Unspeech("unspeech")
-  DBDriver("@proj-airi/drizzle-duckdb-wasm")
+  DBDriver("@proj-yoko/drizzle-duckdb-wasm")
   MemoryDriver("[WIP] Memory Alaya")
-  DB1("@proj-airi/duckdb-wasm")
-  SVRT("@proj-airi/server-runtime")
+  DB1("@proj-yoko/duckdb-wasm")
+  SVRT("@proj-yoko/server-runtime")
   Memory("Memory")
   STT("STT")
   Stage("Stage")
-  StageUI("@proj-airi/stage-ui")
-  UI("@proj-airi/ui")
+  StageUI("@proj-yoko/stage-ui")
+  UI("@proj-yoko/ui")
 
-  subgraph AIRI
+  subgraph Yoko
     DB1 --> DBDriver --> MemoryDriver --> Memory --> Core
     UI --> StageUI --> Stage --> Core
     Core --> STT
@@ -251,22 +260,22 @@ flowchart TD
 
   subgraph UI_Components
     UI --> StageUI
-    UITransitions("@proj-airi/ui-transitions") --> StageUI
-    UILoadingScreens("@proj-airi/ui-loading-screens") --> StageUI
-    FontCJK("@proj-airi/font-cjkfonts-allseto") --> StageUI
-    FontXiaolai("@proj-airi/font-xiaolai") --> StageUI
+    UITransitions("@proj-yoko/ui-transitions") --> StageUI
+    UILoadingScreens("@proj-yoko/ui-loading-screens") --> StageUI
+    FontCJK("@proj-yoko/font-cjkfonts-allseto") --> StageUI
+    FontXiaolai("@proj-yoko/font-xiaolai") --> StageUI
   end
 
   subgraph Apps
-    Stage --> StageWeb("@proj-airi/stage-web")
-    Stage --> StageTamagotchi("@proj-airi/stage-tamagotchi")
-    Core --> RealtimeAudio("@proj-airi/realtime-audio")
-    Core --> PromptEngineering("@proj-airi/playground-prompt-engineering")
+    Stage --> StageWeb("@proj-yoko/stage-web")
+    Stage --> StageTamagotchi("@proj-yoko/stage-tamagotchi")
+    Core --> RealtimeAudio("@proj-yoko/realtime-audio")
+    Core --> PromptEngineering("@proj-yoko/playground-prompt-engineering")
   end
 
   subgraph Server_Components
-    Core --> ServerSDK("@proj-airi/server-sdk")
-    ServerShared("@proj-airi/server-shared") --> SVRT
+    Core --> ServerSDK("@proj-yoko/server-sdk")
+    ServerShared("@proj-yoko/server-shared") --> SVRT
     ServerShared --> ServerSDK
   end
 
@@ -296,11 +305,11 @@ flowchart TD
   XSAI --> F_AGENT
   XSAI --> MC_AGENT
 
-  Core --> TauriMCP("@proj-airi/tauri-plugin-mcp")
-  Memory_PGVector("@proj-airi/memory-pgvector") --> Memory
+  Core --> TauriMCP("@proj-yoko/tauri-plugin-mcp")
+  Memory_PGVector("@proj-yoko/memory-pgvector") --> Memory
 
   style Core fill:#f9d4d4,stroke:#333,stroke-width:1px
-  style AIRI fill:#fcf7f7,stroke:#333,stroke-width:1px
+  style Yoko fill:#fcf7f7,stroke:#333,stroke-width:1px
   style UI fill:#d4f9d4,stroke:#333,stroke-width:1px
   style Stage fill:#d4f9d4,stroke:#333,stroke-width:1px
   style UI_Components fill:#d4f9d4,stroke:#333,stroke-width:1px
@@ -347,8 +356,8 @@ flowchart TD
 - [josephrocca/ChatVRM-js: A JS conversion/adaptation of parts of the ChatVRM (TypeScript) code for standalone use in OpenCharacters and elsewhere](https://github.com/josephrocca/ChatVRM-js)
 - Design of UI and style was inspired by [Cookard](https://store.steampowered.com/app/2919650/Cookard/), [UNBEATABLE](https://store.steampowered.com/app/2240620/UNBEATABLE/), and [Sensei! I like you so much!](https://store.steampowered.com/app/2957700/_/), and artworks of [Ayame by Mercedes Bazan](https://dribbble.com/shots/22157656-Ayame) with [Wish by Mercedes Bazan](https://dribbble.com/shots/24501019-Wish)
 - [mallorbc/whisper_mic](https://github.com/mallorbc/whisper_mic)
-- [`xsai`](https://github.com/moeru-ai/xsai): Implemented a decent amount of packages to interact with LLMs and models, like [Vercel AI SDK](https://sdk.vercel.ai/) but way small.
+- [`xsai`](https://github.com/yoko-proj/xsai): Implemented a decent amount of packages to interact with LLMs and models, like [Vercel AI SDK](https://sdk.vercel.ai/) but way small.
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=moeru-ai/airi&type=Date)](https://www.star-history.com/#moeru-ai/airi&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=yoko-proj/yoko&type=Date)](https://www.star-history.com/#yoko-proj/yoko&Date)

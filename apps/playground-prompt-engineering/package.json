@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.7.2-beta.1",
   "private": true,
-  "description": "Prompt Engineering Playground for AI Characters",
+  "description": "Prompt Engineering Playground for Yoko AI Characters",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",

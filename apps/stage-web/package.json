@@ -19,6 +19,7 @@
   "dependencies": {
     "@date-fns/utc": "^2.1.1",
     "@formkit/auto-animate": "^0.8.2",
+    "@google/generative-ai": "^0.14.1",
     "@huggingface/transformers": "^3.7.0",
     "@llama-flow/core": "^0.4.4",
     "@moeru/std": "catalog:",
